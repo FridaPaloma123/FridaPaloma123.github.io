@@ -1,37 +1,90 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Materia 3</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>TICS</h1>
-        <li><a href="index.html" class="boton-materia">INICIO</a></li>
-    </header>
-  <div class="cuadro">
-    <div class="titulo">Submodulo 3</div>
-    <div class="contenido">
-      
-      <h2>Comunidades virtuales</h2>
-        <h3>Bimestre 1</h3>
-        <p>Usa diferentes tipos de redes y comunidades virtuales, examinando los tipos de redes y sus características para el intercambio responsable de información y archivos multimedia en sus diferentes ámbitos.</p>
-        <h3>Bimestre 2</h3>
-        <p>Emplea plataformas con actividades educativas innovadoras, identificando archivos multimedia así como comunidades virtuales, del ámbito escolar o profesional para favorecer su formación continua.</p>
-    </div>
-  </div>
+    <div class="todo">
+        <div class="encabezado">
+            <h1>Formulario y Galeria</h1>
+            <nav>
+                <a href="html1.html">Capitulo 1-4</a>
+                <a href="html2.html">Capiulo 5-8</a>
+                <a href="index.html">Inicio</a>
+            </nav>
+        </div>
+        <h1>Formulario</h1>
+        <form id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
 
-  <div class="galeria">
-    <img src="fotos/31.jpg" alt="Foto 1">
-    <img src="fotos/32.jpg" alt="Foto 2">
-    <img src="fotos/33.jpg" alt="Foto 3">
-  </div>
-  <footer>
-    <p>FRIDA PALOMA ACOSTA FLORES</p>
-    <p>GRUPO 626, 24191142</p>
-    <img src="fotos/yo.jpg" alt="Foto del creador">
-</footer>
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" name="apellidos" required>
+
+            <label for="fecha">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div class="mensaje" id="mensaje"></div>
+
+        <h1>Galeria</h1>
+        <h2>Modulo 1</h2>
+        <div class="galeria">
+            <img src="img/11.png" alt="Imagen 1">
+            <img src="img/12.png" alt="Imagen 2">
+            <img src="img/13.png" alt="Imagen 3">
+            <img src="img/21.jpg" alt="Imagen 4">
+            <img src="img/22.png" alt="Imagen 5">
+            <img src="img/23.jpg" alt="Imagen 6">
+        </div>  
+            <h2>Modulo 2</h2>
+        <div class="galeria">
+            <img src="img/31.jpg" alt="Imagen 7">
+            <img src="img/32.jpg" alt="Imagen 8">
+            <img src="img/33.jpg" alt="Imagen 9">
+            <img src="img/41.png" alt="Imagen 10">
+            <img src="img/42.jpg" alt="Imagen 11">
+            <img src="img/43.png" alt="Imagen 12">
+        </div>    
+            <h2>Modulo 3</h2>
+        <div class="galeria">
+            <img src="img/51.jpg" alt="Imagen 13">
+            <img src="img/52.jpg" alt="Imagen 14">
+            <img src="img/53.jpg" alt="Imagen 15">
+            <img src="img/61.jpg" alt="Imagen 16">
+            <img src="img/62.jpg" alt="Imagen 17">
+            <img src="img/63.jpg" alt="Imagen 18">
+        </div>
+            <h2>Modulo 4</h2>
+        <div class="galeria">
+            <img src="img/71.jpg" alt="Imagen 19">
+            <img src="img/72.jpg" alt="Imagen 20">
+            <img src="img/73.jpg" alt="Imagen 21">
+            <img src="img/81.jpg" alt="Imagen 22">
+            <img src="img/82.jpg" alt="Imagen 23">
+            <img src="img/83.jpg" alt="Imagen 24">
+        </div>
+    </div>
+    
+        <footer class="piepagina">
+            <img src="img/img3.jpg" style="float: left;" width="7%">
+            <p>FRIDA PALOMA ACOSTA FLORES</p>
+            <p>24191142</p>
+            <p>626</p>
+        </footer>
+    
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(e) {
+            e.preventDefault(); 
+            document.getElementById("mensaje").textContent = "¡Gracias por responder!";
+            this.reset();
+        });
+    </script>
+
 </body>
 </html>
